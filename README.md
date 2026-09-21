@@ -1,5 +1,7 @@
 Hi all, thanks so much for the challenge! This is a short README, but a longer version is supplied in [IMPLEMENTATION.md](IMPLEMENTATION.md) that goes through everything in nitty gritty detail.
 
+Time taken: about 4 hrs 30, but I spent a good amount of time on handwriting this readme 
+
 ## Running it
 
 Needs Python 3.11+, Node, and an Anthropic API key. Two processes: the API and the UI.
