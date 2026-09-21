@@ -1,0 +1,8 @@
+python-dotenv
+fastapi
+uvicorn[standard]
+jinja2
+python-multipart
+pydantic
+pydantic-ai-slim[anthropic]
+pymupdf4llm

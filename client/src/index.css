@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+/* Tailwind v4 is configured in CSS. These tokens become utilities
+   (bg-surface, text-accent, border-line, ...) with no JS config file. */
+@theme {
+  --color-base: #161719;
+  --color-surface: #1e1f23;
+  --color-raised: #26282d;
+  --color-line: #33353c;
+  --color-ink: #e9e9ec;
+  --color-muted: #9698a0;
+  --color-faint: #6b6d75;
+
+  --color-accent: #ff7a18;        /* orange */
+  --color-accent-soft: #ffa45c;
+  --color-ember: #ff3d1f;         /* red-orange */
+  --color-ember-dim: #7a2414;
+
+  --color-ok: #4ade80;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+html, body, #root { height: 100%; }
+
+body {
+  background: var(--color-base);
+  color: var(--color-ink);
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* A warm floor-glow so the dark grey doesn't read as flat black. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: auto 0 0 0;
+  height: 40vh;
+  pointer-events: none;
+  background: radial-gradient(60% 100% at 50% 100%, rgba(255, 122, 24, 0.07), transparent 70%);
+}
+
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--color-line); border-radius: 99px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-faint); }
